@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+    background-color: #0c1b7c;
+}
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    transition: 0.5s ease-in-out;
+    color: white;
+    
+}
+a:hover {
+    color: #fc0065;
+    transform: translateY(-5px);
+}
+body {
+    background-color: #0c1b7c;
+    color: rgb(8, 128, 146);
+    color: hsl(231, 90%, 30%)
+}
