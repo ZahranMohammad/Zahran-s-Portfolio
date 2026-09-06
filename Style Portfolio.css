@@ -8,42 +8,69 @@ html {
 }
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
     background-color: transparent;
+}
+.nav-menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    margin-left: 350px;
+    font-size: 16px;
+}
+.social-icons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-right: 150px;
+    font-size: 34px;
+}
+.social-icons a {
+    color: white;
+    transition: 0.3s ease;
+}
+.social-icons a:hover {
+    color: #fc0065;
 }
 .navbar a {
     text-decoration: none;
     font-weight: bold;
     font-family: poppins, sans-serif;
-    font-size: 15px;
     transition: 0.4s ease-in-out;
     color: white;
     
 }
-a:hover {
+.nav-menu a:hover {
     color: #fc0065;
     transform: translateY(-4px);
+    font-size: 18px;
 }
 body {
-    background-color: #0a184d;
+    background-color: #15286d;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 .hero {
-    height: 100%;
-    display: flex;
+    height: 100vh;
+    display: flex; flex-direction: column;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    background-color: #0a184d;
-    flex-direction: column;
+    overflow: visible;
+    background-color: #15286d;
+    justify-content: flex-end;
+
 }
 .container {
-    flex: 1;
     display: flex;
     width: 100%;
-    display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     gap: 40px;
 }
@@ -51,42 +78,58 @@ body {
 .hero-text {
     max-width: 600px;
     font-family: poppins, sans-serif;
+     color: white;
+     align-items: center;
+     margin-top: -150px;
+     z-index: 3;
+     
 }
 .subtitle {
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
     color: white;
+    margin-bottom: -35px;
 }
 .title {
-    font-size: 56px;
+    font-size: 62px;
     font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 24px;
+    line-height: 1.25;
+}
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    word-spacing: 4px;   
 }
 .btn {
     display: inline-block;
-    padding: 12px 34px;
-    background-color: #efe9dd;
+    padding: 12px 70px;
+    background-color: white;
     color: #111;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s ease;
+    border-radius: 80px;
+    transition: 0.5s ease;
     position: relative;
-    left: 10%;
+    margin-top: 20px;
+    word-spacing: 4px;
+    font-size: 16px;
 }
 .btn:hover {
-    transform: scale(1.05);
+    color: #fc0065;
+    transform: translateY(-5px);
+    transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    font-size: 17px;
 }
                                 /* Kanan Gambar */
 .hero-image {
     object-fit: cover;
     position: relative;
     display: block;
-    width: 700px;
-    height: 750px;
+    width: 900px;
+    height: 950px;
+    right: -100px;
     overflow: visible;
     justify-content: center;
     border-radius: 36px;
@@ -97,7 +140,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 50%;
     background: linear-gradient(to top,
     rgba(0,0,0,0.9)0%,
     rgba(0,0,0,0.6)40%,
