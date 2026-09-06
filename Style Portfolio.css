@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -5,24 +10,109 @@ html {
     display: flex;
     justify-content: center;
     gap: 30px;
-    padding: 10px;
-    background-color: #0c1b7c;
+    padding: 20px;
+    background-color: transparent;
 }
 .navbar a {
     text-decoration: none;
     font-weight: bold;
     font-family: poppins, sans-serif;
     font-size: 15px;
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
     color: white;
     
 }
 a:hover {
     color: #fc0065;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 body {
-    background-color: #0c1b7c;
-    color: rgb(8, 128, 146);
-    color: hsl(231, 90%, 30%)
+    background-color: #0a184d;
+}
+.hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #0a184d;
+    flex-direction: column;
+}
+.container {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 40px;
+}
+                                        /* Kiri Teks */
+.hero-text {
+    max-width: 600px;
+    font-family: poppins, sans-serif;
+}
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: white;
+}
+.title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+.btn {
+    display: inline-block;
+    padding: 12px 34px;
+    background-color: #efe9dd;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    position: relative;
+    left: 10%;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+                                /* Kanan Gambar */
+.hero-image {
+    object-fit: cover;
+    position: relative;
+    display: block;
+    width: 700px;
+    height: 750px;
+    overflow: visible;
+    justify-content: center;
+    border-radius: 36px;
+}
+                              /* Gradasi Hitam Bawah */
+.black-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top,
+    rgba(0,0,0,0.9)0%,
+    rgba(0,0,0,0.6)40%,
+    rgba(0,0,0,0.2)70%,
+    rgba(0,0,0,0)100%
+);
+z-index: 2;
+pointer-events: none;
+}
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    border-radius: 24px 24px 0 0;
+    display: block;
+    z-index: 1;
 }
