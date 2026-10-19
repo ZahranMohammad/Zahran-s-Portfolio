@@ -103,7 +103,7 @@ body {
      align-items: center;
      margin-top: -150px;
      margin-left: 250px;
-     z-index: 3;
+     z-index: 6;
      
 }
 .subtitle {
@@ -136,6 +136,7 @@ body {
     margin-top: 20px;
     word-spacing: 4px;
     font-size: 16px;
+    z-index: 3;
 }
 .btn:hover {
     color: #fc0065;
@@ -148,14 +149,16 @@ body {
 .hero-image {
     object-fit: cover;
     position: relative;
-    display: block;
     width: 900px;
-    height: 750px;
+    height: 900px;
     right: 100px;
-    overflow: visible;
+    overflow: hidden;
     justify-content: center;
-    border-radius: 36px;
+    padding-bottom: 200px;
+}
+.zahran-image {
     z-index: 1;
+    position: relative;
 }
 .bg-decoration {
     position: absolute;
@@ -178,15 +181,6 @@ body {
     margin-right: 1170px;
     margin-bottom: 500px;
     opacity: 20%;
-
-}
-.hero-image img:not(.bg-decoration) {
-    position: relative;
-    z-index: 1;
-}
-.hero-image img:not(.bg-plus) {
-    position: relative;
-    z-index: 1;
 }
                               /* Gradasi Hitam Bawah */
 .black-gradient {
@@ -194,14 +188,14 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40%;
+    height: 60%;
     background: linear-gradient(to top,
     rgba(0,0,0,0.9)0%,
-    rgba(0,0,0,0.6)20%,
+    rgba(0,0,0,0.6)25%,
     rgba(0,0,0,0.2)70%,
     rgba(0,0,0,0)90%
 );
-    z-index: 2;
+    z-index: 5;
     pointer-events: none;
     
 }
@@ -214,8 +208,8 @@ body {
     display: block;
     z-index: 1;
 
-    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
                                         /* About */
@@ -239,9 +233,10 @@ body {
 }
 .about-text {
     font-family: poppins, sans-serif;
-    color: #13235b;
-    margin-bottom: -35px;
-    margin-left: 20px;
+    color: #0c38d7;
+    margin-bottom: -25px;
+    font-size: 18px;
+    font-weight: semi-bold;
 }
 .about-content {
     color: #13235b;
@@ -257,5 +252,55 @@ body {
 }
                                         /* BTN */
 .about-buttons a {
-    text-decoration: none !important;
+    text-decoration: none;
+    position: relative;
+    margin-top: 450px;
+    margin-left: 80px;
+    overflow: hidden;
+    display: inline-block;
+    font-family: poppins, sans-serif;
+    align-items: center;
+}
+.cv-btn {
+    background-color: #13235b;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 80px;
+    font-weight: bold;
+    transition: 0.5s ease;
+    font-size: 14px;
+}
+.cv-btn:hover {
+    color: white;
+    outline: 2px solid #0c38d7;
+    outline-offset: 3px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform: scale(1.02);
+}
+.cv-btn i {
+    margin-left: 10px;
+}
+.projects-btn {
+    color: #0c38d7;
+    padding: 12px 30px;
+    padding-left: 0px;
+    right: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.5s ease;
+}
+.projects-btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #0c38d7;
+    bottom: -7px;
+    transition: 0.4s ease;
+}
+.projects-btn:hover::after {
+    width: 90%;
+}
+.projects-btn:hover {
+    transform: scale(1.02);
 }
