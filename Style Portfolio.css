@@ -15,12 +15,26 @@ html {
     left: 0;
     width: 100%;
     z-index: 1000;
-    max-width: 1400px;
-    margin: 0 auto;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background-color: transparent;
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+.navbar.hide {
+    transform: translateY(-100%);
+}
+.navbar.scrolled {
+    background: rgba(250, 251, 252, 0.876);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(191, 196, 215, 0.631);
+}
+.navbar.scrolled a {
+    color: #0c38d7;
+}
+.navbar.scrolled a:hover {
+    color: #fc0065;
 }
 .nav-menu {
     display: flex;
@@ -215,13 +229,17 @@ body {
                                         /* About */
 
 #about {
-    background-color: whitesmoke;
+    background-color: #F0F8FF;
     height: 100vh;
+}
+.about {
+    overflow: hidden;
 }
 .container-about {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
+    overflow: hidden;
 }
                                         /* Text Kiri*/
 .text-about {
@@ -229,7 +247,7 @@ body {
     margin-left: 80px;
     position: absolute;
     z-index: 1;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .about-text {
     font-family: poppins, sans-serif;
@@ -254,7 +272,7 @@ body {
 .about-buttons a {
     text-decoration: none;
     position: relative;
-    margin-top: 450px;
+    margin-top: 420px;
     margin-left: 80px;
     overflow: hidden;
     display: inline-block;
@@ -262,7 +280,7 @@ body {
     align-items: center;
 }
 .cv-btn {
-    background-color: #13235b;
+    background-color: #0c38d7;
     color: white;
     padding: 12px 30px;
     border-radius: 80px;
@@ -280,6 +298,9 @@ body {
 .cv-btn i {
     margin-left: 10px;
 }
+.projects-btn i {
+    margin-left: 5px;
+}
 .projects-btn {
     color: #0c38d7;
     padding: 12px 30px;
@@ -295,12 +316,96 @@ body {
     width: 0;
     height: 3px;
     background-color: #0c38d7;
-    bottom: -7px;
+    bottom: -5px;
     transition: 0.4s ease;
 }
 .projects-btn:hover::after {
-    width: 90%;
+    width: 86%;
 }
 .projects-btn:hover {
     transform: scale(1.02);
+}
+                                        /* Bottom Boxes */
+.kotak-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -15px;
+    max-width: 1000px;
+    max-height: 1800px;
+    font-family: poppins, sans-serif;
+    line-height: 0.5;
+    margin-left: 30px;
+    position: relative;
+    padding-top: 60px;
+}
+.kotak-container h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 5px;
+    padding-bottom: -10px;
+    color: #0c38d7;
+    transition: 0.3s ease;
+}
+.kotak-container p {
+    font-size: 14px;
+    font-weight: 450;
+    margin-left: 5px;
+    line-height: 1.5;
+    color: #13235b;
+
+}
+.kotak-container .kotak1, .kotak-container .kotak2, .kotak-container .kotak3, .kotak-container .kotak4 {
+    background-color: #e3effc;
+    padding: 10px;
+    width: 210px;
+    height: 150px;
+    flex-direction: column;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+.kotak-container i {
+    margin-left: 10px;
+    margin-top: 5px;
+    color: #0c38d7;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 50%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.kotak-container .kotak1:hover, .kotak-container .kotak2:hover, .kotak-container .kotak3:hover, .kotak-container .kotak4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+                                                /* Foto & Background */
+.about-image {
+    position: absolute;
+    justify-self: end;
+}
+.kotak5 {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #0c38d7 50%, #13235b 100%);
+    box-shadow: 0 30px 60px rgba(12, 56, 215, 0.3);
+    z-index: 1;
+    margin-top: -520px;
+    margin-left: 650px;
+}
+
+.zahran-sit {
+    position: relative;
+    width: 500px;
+    height: auto;
+    z-index: 3;
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    transform: scaleX(-1);
+    margin-top: -820px;
+    margin-left: 450px;
 }

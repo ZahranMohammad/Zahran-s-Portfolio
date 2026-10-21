@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <title> Zahran Muhammad Syafiq | Portfolio</title>
         <link rel="stylesheet" href="Style Portfolio.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
     </head>
+    
 <body>
     <nav class="navbar">
         <div class="nav-menu">
@@ -23,7 +25,7 @@
         </div>
     </nav>
 
-                    <!--- Home --->
+                                                            <!--- Home --->
 
     <section class="hero" id="home">
         <div class="container">
@@ -47,7 +49,7 @@
         <div class="black-gradient"></div>
     </section>
 
-                        <!--- About -->
+                                                             <!--- About -->
 
     <section id="about">
         <div class="container-about">
@@ -58,7 +60,7 @@
         <div class="about-content">
             <h1>Driven by Curiosity,<br><div class="purpose">
                 Built with Purpose</div></h1>
-        </div>
+            </div>
         <div class="about-description">
             <p>
                 A student, web developer, and a lifelong learner<br>
@@ -77,35 +79,62 @@
             <a href="Images/CV Zahran.pdf" class="cv-btn" download>
                 Download CV<i class="fa-solid fa-download"></i> </a>
             <a href="#projects" class="projects-btn">
-                Explore My Projects  ➡
+                Explore My Projects   <i class="fa-solid fa-long-arrow-right"></i>
             </a>
         </div>
+    
+    <div class="kotak-container">
+        <div class="kotak1">
+            <div class="kotak1-content">
+            <div class="kotak1-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h2>Student</h2>
+                <p>A student who interests<br>in Information Systems.</p>
+            </div>
+        </div>
+        <div class="kotak2">
+            <div class="kotak2-content">
+                <div class="kotak2-icon"><i class="fa-solid fa-code"></i></div>
+                <h2>Web Developer</h2>
+                <p>Building responsive and<br>user-friendly websites.</p>
+            </div>
+        </div>
+        <div class="kotak3">
+            <div class="kotak3-icon"><i class="fa-solid fa-paint-brush"></i></div>
+            <div class="kotak3-content">
+                <h2>Design Enthusiast</h2>
+                <p>Creating simple and<br>meaningful visual designs.</p>
+            </div>
+        </div>
+        <div class="kotak4">
+            <div class="kotak4-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="kotak4-content">
+                <h2>Problem Solver</h2>
+                <p>Always curious, always<br>looking for solutions.</p>
+            </div>
+        </div>
+    <div class="about-image">
+        <div class="kotak5"></div>
+        <img src="Images/zahran-sit.png" class="zahran-sit" alt="Zahran">
     </div>
-    <div class="aboutMeBox">
-        <div class="student">
-            <p>Student</p>
-        <div class="student-description">
-            <p>
-                A student who interests<br>in Information Systems.
-                </p>
-        </div>
-        <div class="webDeveloper">
-            <p>Web Developer</p>
-        <div class="webDeveloper-description">
-            <p>Building responsive<br>and user-friendly websites.</p>
-        </div>
-        <div class="designer">
-            <p>Design Enthusiast</p>
-        <div class="designer-description">
-            <p>Creating simple and<br>meaningful visual designs.</p>
-        </div>
-        <div class="problemSolver">
-            <p>Problem Solver</p>
-        <div class="problemSolver-description">
-            <p>Always curious, always<br>looking for solutions.</p>
         </div>
     </div>
-        </div>
+
     </section>
+    <script src="app.js"></script>
+    <script>
+        const navbar = document.querySelector('.navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const current = window.scrollY;
+        navbar.classList.toggle('scrolled', current > 50);
+        if (current > lastScroll && current > 100) {
+        navbar.classList.add('hide');       // scroll ke bawah: sembunyikan
+        } else {
+        navbar.classList.remove('hide');    // scroll ke atas: munculkan
+        }
+
+    lastScroll = current <= 0 ? 0 : current;
+});
+</script>
 </body>
 </html>
